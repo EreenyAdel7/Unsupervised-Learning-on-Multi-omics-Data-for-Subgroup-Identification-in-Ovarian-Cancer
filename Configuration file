@@ -1,18 +1,35 @@
-Parameters:
-- Model Architecture:EfficientNetV2B2
-- Input Image Size: 260x260 pixels
-- Pretrained Model Weights: ImageNet weights
-- Number of Classes: Determined from the dataset
-- Loss Function: Sparse Categorical Crossentropy
-- Optimizer: Adam optimizer with learning rate 1e-4
-- Training Epochs: 6
+#### Parameters:
+# AutoEncoder Architecture:
+- 90-10% train-validation split
+- 4 hidden layers with 2000,1000,500, and 100 nodes respectively. 
+- Activation Function: Rectified linear unit (ReLU)
+- Loss Function: Mean Squared Error (MSE) 
+- Optimizer: Adam optimizer with learning rate 0.001
+- Batches: 24 samples
+- Training Epochs: 200
+# Consensus k-means Clustering
+- K from 2 to 10. 
+- repeated 1000 iterations for each k.
+- using 80% of the data in each iteration. 
+- ambiguously clustered pairs calculated by difference between x=0.1, x= 0.9 of the CDF curve.
 
-Dependencies:
-- `opencv-python==4.5.3.56`
-- `numpy==1.21.2`
-- `scikit-learn==0.24.2`
-- `tensorflow==2.6.0`
-- `matplotlib==3.4.3`
-- `captum==0.4.0`
-- `torchvision==0.10.0`
-- `Pillow==8.4.0`
+#### Dependencies:
+# Python code parts (using Colab)
+pandas==1.5.3
+numpy==1.23.5
+sklearn==1.2.2
+tensorflow==2.15.0
+matplotlib==3.7.1
+
+# R code parts (using RStudio, R version 4.2.3 )
+TCGABiolinks==2.26.0
+SummarizedExperiment==1.28.0
+sesameData==1.16.0
+sesame==1.16.1
+tidyverse==2.0.0
+maftools==2.14.0
+ConsensusClusterPlus==1.62.0
+survival==3.5.3
+survminer==0.4.9
+ggplot2==3.4.4
+data.table==1.14.10
