@@ -1,8 +1,19 @@
 # Python code parts (using Colab)
-pandas== 1.3.3
-numpy==1.21.2
-scikit-learn==0.24.2
-tensorflow==2.6.0
+pandas==1.5.3
+numpy==1.23.5
+sklearn==1.2.2
+tensorflow==2.15.0
+matplotlib==3.7.1
 
 # R code parts (using RStudio, R version 4.2.3 )
-
+TCGABiolinks==2.26.0
+SummarizedExperiment==1.28.0
+sesameData==1.16.0
+sesame==1.16.1
+tidyverse==2.0.0
+maftools==2.14.0
+ConsensusClusterPlus==1.62.0
+survival==3.5.3
+survminer==0.4.9
+ggplot2==3.4.4
+data.table==1.14.10
