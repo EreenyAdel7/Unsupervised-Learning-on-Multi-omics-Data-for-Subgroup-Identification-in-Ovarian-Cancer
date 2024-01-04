@@ -18,7 +18,8 @@ Algorithms Used:
 - PCA: Used also for dimensionality reduction to validate the accuracy of AutoEncoder.
 
 Dependencies:
-- TCGABiolinks, SummarizedExperiment,sesameData, sesame, tidyverse, and maftools for dowloading the data.
+- TCGABiolinks, SummarizedExperiment,sesameData, sesame, tidyverse, and maftools for dowloading the data using R.
+- pandas and numpy for reading files in Python.
 - TensorFlow for AutoEncoder learning tasks.
 - scikit-learn for imputing missing values while preprocessing the data and PCA.
 - Matplotlib for visualizing data and results.
