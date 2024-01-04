@@ -1,2 +1,2 @@
-# mRNA, miRNA, DNA methylation, and proteome profiling files can be downloaded using the code in ""
-# Clinical files is dowloaded from cBioPortal and this is the name of downloaded project "ov_tcga_pan_can_atlas_2018_clinical_data"
+# mRNA, miRNA, DNA methylation, and proteome profiling files can be downloaded using "Downloading the Data.R"
+# Clinical files are downloaded from cBioPortal and this is the name of the downloaded project "ov_tcga_pan_can_atlas_2018_clinical_data"
