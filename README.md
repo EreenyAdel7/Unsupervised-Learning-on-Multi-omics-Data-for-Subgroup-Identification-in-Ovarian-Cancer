@@ -4,7 +4,7 @@
 
 # Installation Instructions
 - Check this repository.
-- For R code parts, install the required dependencies using the following command: pip install -r requirements.txt.
+- Install the required dependencies in requirements.txt.
 
 # Usage
 - In R, set the working directory of the folder that has the downloaded datasets.
