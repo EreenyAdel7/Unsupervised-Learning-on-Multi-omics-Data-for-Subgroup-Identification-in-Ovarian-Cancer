@@ -1,0 +1,25 @@
+Project Architecture:
+- Data Loading and Preprocessing: The TCGABiolinks R package is used to load and preprocess mRNA, miRNA, DNA methylation, and proteome profiling files from the TCGA-OV project on the GDC portal.
+  Clinical data (ov_tcga_pan_can_atlas_2018_clinical_data) is downloaded directly from cBioPortal.
+- Obtaining Multiomics Matrix: Each preprocessed single-omic is concatenated with the other to form the multi-omics data frame used for further analysis.
+- Dimensionality reduction: The multi-omics data frame is dimensionality reduced using both AutoEncoder and PCA algorithms to compare clusters resulting from both. 
+- Consensus k-means clustering: reduced data frames are clustered using Consensus k-means clustering algorithms.
+- Survival analysis: Kaplan-Meier analysis is performed to determine if there exists any difference in the survival between the clusters obtained. 
+- Visualization: tSNE plots for clusters obtained from original and reduced data are visualized. 
+
+Design Decisions:
+- Data Preprocessing: Drop features with zero expression in more than 20% of samples in mRNA and miRNA but 10% in DNA methylation and proteome profiling, impute missing values, and apply min-max normalization. 
+- Obtaining Multiomics Matrix: Concatenate all data types by common sample ids. 
+- Consensus k-means clustering evaluation: Choose k-clusters based on the lowest ambiguously clustered pairs that are quantified using the cumulative distribution function.
+- Survival analysis evaluation: Check the p-value obtained from the log-rank test. 
+
+Algorithms Used:
+- AutoEncoder neural network: Used as the base architecture for dimensionality reduction.
+- PCA: Used also for dimensionality reduction to validate the accuracy of AutoEncoder.
+
+Dependencies:
+- TCGABiolinks, SummarizedExperiment,sesameData, sesame, tidyverse, and maftools for dowloading the data.
+- TensorFlow for AutoEncoder learning tasks.
+- scikit-learn for imputing missing values while preprocessing the data and PCA.
+- Matplotlib for visualizing data and results.
+- ConsensusClusterPlus, survival, survminer, ggplot2, data.table for clustering and survival analysis. 
