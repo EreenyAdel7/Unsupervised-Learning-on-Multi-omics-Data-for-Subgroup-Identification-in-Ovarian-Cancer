@@ -1,0 +1,18 @@
+Parameters:
+- Model Architecture:EfficientNetV2B2
+- Input Image Size: 260x260 pixels
+- Pretrained Model Weights: ImageNet weights
+- Number of Classes: Determined from the dataset
+- Loss Function: Sparse Categorical Crossentropy
+- Optimizer: Adam optimizer with learning rate 1e-4
+- Training Epochs: 6
+
+Dependencies:
+- `opencv-python==4.5.3.56`
+- `numpy==1.21.2`
+- `scikit-learn==0.24.2`
+- `tensorflow==2.6.0`
+- `matplotlib==3.4.3`
+- `captum==0.4.0`
+- `torchvision==0.10.0`
+- `Pillow==8.4.0`
